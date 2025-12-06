@@ -1,0 +1,50 @@
+--1
+select DEPTNO, ENAME, MGR from EMP;
+
+--2
+select * from EMP;
+
+--3
+select ENAME,SAL*12 as Pensja from emp;
+
+--4
+select ENAME,SAL+250 as Penja from EMP;
+
+--5
+select DEPTNO from EMP;
+
+--6
+select distinct DEPTNO from EMP;
+
+--7
+select * from EMP order by ENAME;
+
+--8
+select * from EMP order by HIREDATE DESC;
+
+--9
+select ENAME, EMPNO, JOB, DEPTNO from EMP where job = 'CLERK';
+
+--10
+select DNAME, DEPTNO from DEPT where DEPTNO > 20;
+
+--11
+select * from EMP where COMM > SAL;
+
+--12
+select * from EMP where SAL >=1000 and SAL<=2000;
+
+--13
+select * from EMP where ENAME like 'S%';
+
+--14
+select * from emp where JOB = 'CLERK' and (SAL >=1000 and SAL <=2000);
+
+--15
+select * from EMP where (JOB = 'MANAGER' and SAL > 1500) or JOB = 'SALESMAN';
+
+--16
+select * from EMP where JOB = 'MANAGER' or (JOB = 'CLERK' and DEPTNO = 10);
+
+--17
+select DEPTNO, DNAME from DEPT order by DEPTNO;
